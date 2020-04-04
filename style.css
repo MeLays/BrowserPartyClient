@@ -1,0 +1,134 @@
+html, 
+body {
+    height: 100%;
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+}
+h3{
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
+
+/*------------------------*/
+/* Body styles */
+
+@keyframes slide_in {
+	0% {
+		opacity: 0;
+		transform: translateX(-30%);
+	}
+	1% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slide_in_right {
+	0% {
+		opacity: 0;
+		transform: translateX(30%);
+	}
+	1% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slide_out_right {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	1% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Basic style "colorfusion" from #EB5C79 to #7D5C60*/
+body.colorfusion{
+	background: rgb(235,92,121);
+	background: linear-gradient(42deg, rgba(235,92,121,1) 15%, rgba(125,92,96,1) 100%);
+}
+
+/*------------------------*/
+/* Input styles */
+
+input {
+	border: 0;
+	outline: 0;
+	background: transparent;
+	border-bottom: 2px solid white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 2.5vw;
+}
+
+input::placeholder {
+	color: rgba(255,255,255,0.4);
+}
+
+/*------------------------*/
+/* Button styles */
+button {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.7vw;
+	color:white;
+	transition-duration: 1s;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	
+	margin: 1vw;
+}
+button:hover {
+    background:rgba(255,255,255,0.4);
+}
+
+/*------------------------*/
+/* Div styles */
+/* Basic style "elevated" */
+
+div.elevated{
+	background-color: transparent;
+	border-radius: 2vw;
+	box-shadow: 0px 0px 2vw rgba(0,0,0,0.3);
+	
+	position: absolute;
+	padding:3vw;
+	animation: slide_in 1.0s;
+}
+
+div.elevated_reversed{
+	background-color: transparent;
+	border-radius: 2vw;
+	box-shadow: 0px 0px 2vw rgba(0,0,0,0.3);
+	
+	position: absolute;
+	padding:3vw;
+	animation: slide_in_right 1.0s;
+}
+
+div.elevated_reversed_out{
+	background-color: transparent;
+	border-radius: 2vw;
+	box-shadow: 0px 0px 2vw rgba(0,0,0,0.3);
+	opacity: 0;
+	position: absolute;
+	padding:3vw;
+	animation: slide_out_right 1.0s;
+	transform: translateX(-30%);
+}
+
+/*------------------------*/
