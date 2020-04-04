@@ -3,6 +3,8 @@ body {
     height: 100%;
 	font-family: 'Ubuntu', sans-serif;
 	color: white;
+	margin:0;
+	padding:0;
 }
 h3{
 	margin-top: 1vh;
@@ -51,10 +53,23 @@ h3{
 	}
 }
 
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 1vh;
+  }
+}
+
 /* Basic style "colorfusion" from #EB5C79 to #7D5C60*/
 body.colorfusion{
 	background: rgb(235,92,121);
 	background: linear-gradient(42deg, rgba(235,92,121,1) 15%, rgba(125,92,96,1) 100%);
+}
+body.colorfusion2{
+	background: rgb(92,140,235);
+	background: linear-gradient(42deg, rgba(92,140,235,1) 15%, rgba(92,97,125,1) 100%);
 }
 
 /*------------------------*/
@@ -95,6 +110,13 @@ button {
 button:hover {
     background:rgba(255,255,255,0.4);
 	transform: rotateY(10deg);
+}
+
+/*------------------------*/
+/* Image styles */
+
+img.building_1{
+	mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 /*------------------------*/
@@ -141,6 +163,21 @@ div.user{
 }
 div.user:hover{
 	transform: rotateY(10deg);
+}
+
+div.field_step{
+	position: absolute;
+	transition-duration: 1s;
+	padding: 1vw;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 1vw;
+}
+div.field_step:hover{
+	transform: rotateY(10deg);
+}
+
+div.building_container{
+	animation: MoveUpDown 3s ease-in-out infinite;
 }
 
 /*------------------------*/
