@@ -14,6 +14,18 @@ h3{
 /*------------------------*/
 /* Body styles */
 
+.show_on_hover{
+	opacity: 1;
+	font-size: 0;
+	height: 1.5vh;
+}
+
+.show_on_hover:hover{
+	opacity: 1;
+	font-size: 1.5vh;
+	height: initial;
+}
+
 @keyframes slide_in {
 	0% {
 		opacity: 0;
@@ -50,6 +62,29 @@ h3{
 	}
 	100% {
 		opacity: 0;
+	}
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 3vh;
+  }
+}
+
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+		transform: scale(1.5);
+	}
+	1% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
 	}
 }
 
@@ -110,6 +145,19 @@ button {
 button:hover {
     background:rgba(255,255,255,0.4);
 	transform: rotateY(10deg);
+}
+
+button.select_avatar{
+	margin:0;
+	width:33%;
+}
+
+button.selected{
+	background:rgba(255,255,255,0.2);
+}
+
+button.select_avatar:disabled{
+	opacity: 0.1;
 }
 
 /*------------------------*/
@@ -178,6 +226,25 @@ div.field_step:hover{
 
 div.building_container{
 	animation: MoveUpDown 3s ease-in-out infinite;
+}
+
+div.dice_container{
+	transition-duration: 1s;
+    font-size: 8.5vh;
+    border-color: rgba(255,255,255,0.5);
+    border-style: solid;
+    border-width: 0.5vh;
+    border-radius: 2vw;
+    position: absolute;
+    left: 2.5vh;
+    width: 10vh;
+    height: 10vh;
+    top: 85vh;
+	user-select: none;
+}
+
+div.dice_container:hover{
+    background-color: rgba(255,255,255,0.5);
 }
 
 /*------------------------*/

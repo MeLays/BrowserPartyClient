@@ -1,10 +1,68 @@
 <meta charset="UTF-8">
 <html>
 <head>
+
+
+		<script type="text/javascript">
+			var isMobile = false;
+
+			//Detect mobile
+			function updateOrientation(){
+				var w = window.innerWidth;
+				var h = window.innerHeight;
+				
+				//2.0 max -> higher = black bars left and right
+				//1.5 min -> lower = black bars top and bottom
+				
+				if ((w/h) > 2.0){
+					gameDiv = document.getElementById("game_container");
+					gameDiv.style.width = (h*2.0)+"px";
+					gameDiv.style.height = "100%";
+					gameDiv.style.top = "0";
+					gameDiv.style.left = (w-(h*2.0))/2+"px";
+					gameDiv.style.borderRadius = "1vw";
+					gameDiv = document.getElementById("gframe");
+					gameDiv.style.borderRadius = "1vw";
+				}
+				else if ((w/h) < 1.5){
+					gameDiv = document.getElementById("game_container");
+					gameDiv.style.width = "100%";
+					gameDiv.style.height = (w/1.5)+"px";
+					gameDiv.style.top = (h-(w/1.5))/2+"px";
+					gameDiv.style.left = "0";
+					gameDiv.style.borderRadius = "1vw";
+					gameDiv = document.getElementById("gframe");
+					gameDiv.style.borderRadius = "1vw";
+				}
+				else{
+					gameDiv = document.getElementById("game_container");
+					gameDiv.style.width = "100%";
+					gameDiv.style.height = "100%";
+					gameDiv.style.top = "0";
+					gameDiv.style.left = "0";
+					gameDiv.style.borderRadius = "0";
+					gameDiv = document.getElementById("gframe");
+					gameDiv.style.borderRadius = "0";
+				}
+			}
+			
+			function timeout() {
+				setTimeout(function () {
+					updateOrientation();
+					timeout();
+				}, 300);
+			}
+			timeout();
+
+			window.addEventListener("resize", updateOrientation);
+
+		</script>
+
+
 </head>
-<body style="background-color: lightgreen;">
-	<div id="game_container" style="position:absolute; top:15%; width:60vw; height:35vw; left: 20%; background-color:red; border-radius: 1vw;">
-		<iframe src="game.html" width="100%" height="100%" style="border:0; border-radius: 1vw;"> </iframe>
+<body style="background-color: black;">
+	<div id="game_container" style="position:absolute; width:100%; height:100%;">
+		<iframe id="gframe" src="game.html" width="100%" height="100%" style="border:0;"> </iframe>
 	</div>
 </body>
 <html>
