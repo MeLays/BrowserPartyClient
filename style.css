@@ -10,6 +10,12 @@ h3{
 	margin-top: 1vh;
 	margin-bottom: 1vh;
 }
+h1{
+	font-size: 2.5vw;
+}
+span{
+	font-size: 1.3vw
+}
 
 /*------------------------*/
 /* Body styles */
@@ -93,7 +99,21 @@ h3{
     bottom: 0;
   }
   50% {
-    bottom: 1vh;
+    bottom: 4vh;
+  }
+}
+
+@keyframes doProgress {
+  0%{
+	width: 0%;
+	border-top-right-radius: 0vw;
+  }
+  95%{
+	border-top-right-radius: 0vw;
+  }
+  100% {
+	border-top-right-radius: 1vw;
+    width: 100%;
   }
 }
 
@@ -205,11 +225,23 @@ div.elevated_reversed_out{
 div.user{
 	transition-duration: 1s;
 	margin-top:0.6vw;
-	padding: 1vw;
+	padding: 0.7vw;
     background-color: rgba(255,255,255,0.1);
     border-radius: 1vw;
+	font-size: 2vw;
 }
 div.user:hover{
+	transform: rotateY(10deg);
+}
+
+div.user_nobg{
+	transition-duration: 1s;
+	margin-top:0.6vw;
+	padding: 0.7vw;
+    border-radius: 1vw;
+	font-size: 2vw;
+}
+div.user_nobg:hover{
 	transform: rotateY(10deg);
 }
 
@@ -243,8 +275,48 @@ div.dice_container{
 	user-select: none;
 }
 
+div.loading_gamemode{
+	position: fixed;
+	transition-duration: 1s;
+	padding: 1vw;
+    border-radius: 1vw;
+	top: 50%;
+	margin-top: -15%;
+	height: 30%;
+	width: 30%;
+	left:50%;
+	margin-left: -15%;
+	animation: fade_in 1.0s;
+}
+
+div.loading_gamemode_progress{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255,255,255,0.3);
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+	animation: doProgress 10.0s linear;
+}
+
 div.dice_container:hover{
     background-color: rgba(255,255,255,0.5);
+}
+
+div.gamemode_result{
+	position: fixed;
+	transition-duration: 1s;
+	padding: 1vw;
+    border-radius: 1vw;
+	top: 50%;
+	margin-top: -20%;
+	height: 40%;
+	width: 40%;
+	left:50%;
+	margin-left: -20%;
+	animation: fade_in 1.0s;
 }
 
 /*------------------------*/
