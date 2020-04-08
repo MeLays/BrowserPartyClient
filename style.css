@@ -267,12 +267,16 @@ div.dice_container{
     border-style: solid;
     border-width: 0.5vh;
     border-radius: 2vw;
-    position: absolute;
+    position: fixed;
     left: 2.5vh;
     width: 10vh;
     height: 10vh;
     top: 85vh;
 	user-select: none;
+}
+
+div.dice_container:hover{
+    background-color: rgba(255,255,255,0.5);
 }
 
 div.loading_gamemode{
@@ -301,10 +305,6 @@ div.loading_gamemode_progress{
 	animation: doProgress 10.0s linear;
 }
 
-div.dice_container:hover{
-    background-color: rgba(255,255,255,0.5);
-}
-
 div.gamemode_result{
 	position: fixed;
 	transition-duration: 1s;
@@ -316,6 +316,19 @@ div.gamemode_result{
 	width: 40%;
 	left:50%;
 	margin-left: -20%;
+	animation: fade_in 1.0s;
+}
+
+div.game_result{
+	position: fixed;
+	transition-duration: 1s;
+	padding: 1vw;
+	background: linear-gradient(9deg, rgba(235,166,92,1) 15%, rgba(236,197,78,1) 100%); 
+    border-radius: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	left:0;
 	animation: fade_in 1.0s;
 }
 
