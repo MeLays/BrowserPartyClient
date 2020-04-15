@@ -356,6 +356,20 @@ div.game{
 	animation: fade_in 1.0s;
 }
 
+div.minefield{
+	position: absolute;
+	transition-duration: 1s;
+	padding: 1vw;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 1vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+div.minefield:hover{
+	transform: rotateY(10deg);
+}
+
 
 /*------------------------*/
 
