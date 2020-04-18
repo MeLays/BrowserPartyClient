@@ -26,6 +26,11 @@ span{
 	font-size: 1.3vw
 }
 
+hr{
+	clear:both;
+	border: 1px solid rgba(255,255,255,0.2);
+}
+
 /*------------------------*/
 /* Body styles */
 
@@ -137,6 +142,15 @@ span{
   }
 }
 
+span.badge{
+	background-color: rgba(0,0,0,0.1);
+    border-radius: 1vw;
+    padding: 0.4%;
+    position: absolute;
+    margin-top: 2.5%;
+    margin-left: 1%;
+}
+
 /* Basic style "colorfusion" from #EB5C79 to #7D5C60*/
 body.colorfusion{
 	background: rgb(235,92,121);
@@ -161,6 +175,11 @@ input {
 	border-radius: 3vw;
 }
 
+input.small {
+	font-size: 1.25vw;
+	padding:0.3vw;
+}
+
 input:focus {
 	background-color: rgba(255,255,255,0.3);
 }
@@ -171,6 +190,39 @@ input::placeholder {
 
 /*------------------------*/
 /* Button styles */
+button {
+    background:none;
+    border:none;
+    padding:0;
+    cursor: pointer;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.7vw;
+	color:white;
+	transition-duration: 1s;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	margin: 1vw;
+}
+
+button.slim {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.7vw;
+	color:white;
+	transition-duration: 1s;
+	padding-top: 0.5vh;
+	padding-bottom: 0.5vh;
+	padding-left: 0.5vw;
+	padding-right: 0.5vw;
+	margin-bottom: 0.5vh;
+}
+
 button {
     background:none;
     border:none;
@@ -188,6 +240,7 @@ button {
 	
 	margin: 1vw;
 }
+
 button:hover {
     background:rgba(255,255,255,0.4);
 	transform: rotateY(10deg);
@@ -303,6 +356,31 @@ div.dice_container{
 
 div.dice_container:hover{
     background-color: rgba(255,255,255,0.5);
+}
+
+div.userinfo{
+	font-size: 8.5vh;
+    background-color: rgba(0,0,0,0.2);
+    padding: 0.5%;
+    user-select: none;
+    float: left;
+	margin-left: 0.5%;
+    display: inline;
+    border-radius: 3vw;
+}
+
+div.letter_container{
+	transition-duration: 1s;
+    font-size: 8.5vh;
+    border-color: rgba(255,255,255,0.5);
+    border-style: solid;
+    border-width: 0.5vh;
+    border-radius: 2vw;
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+	left: calc(50% - 5vh);
+	user-select: none;
 }
 
 div.loading_gamemode{
