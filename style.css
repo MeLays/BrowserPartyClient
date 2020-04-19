@@ -109,26 +109,26 @@ hr{
 }
 
 @keyframes MoveUpDown {
-  0%, 100% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 4vh;
-  }
+	0%, 100% {
+		transform: translateY(0vh);
+	}
+	50% {
+		transform: translateY(3vh);
+	}
 }
 
 @keyframes doProgress {
-  0%{
-	width: 0%;
-	border-top-right-radius: 0vw;
-  }
-  95%{
-	border-top-right-radius: 0vw;
-  }
-  100% {
-	border-top-right-radius: 1vw;
-    width: 100%;
-  }
+	0%{
+		width: 0%;
+		border-top-right-radius: 0vw;
+	}
+	95%{
+		border-top-right-radius: 0vw;
+	}
+	100% {
+		border-top-right-radius: 1vw;
+		width: 100%;
+	}
 }
 
 @keyframes doProgressReversed {
