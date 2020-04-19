@@ -259,6 +259,38 @@ button.select_avatar:disabled{
 	opacity: 0.1;
 }
 
+button.repeatShown{
+	background-color: red; 
+	position: absolute; 
+	padding: 0; 
+	margin-left: 1%;
+	margin-bottom: 1%;
+}
+
+button.repeatNotShown{
+	background-color: blue; 
+	position: absolute; 
+	padding: 0; 
+	margin-left: 1%;
+	margin-bottom: 1%;
+}
+
+button.repeatCorrectClick{
+	background-color: green; 
+	position: absolute; 
+	padding: 0; 
+	margin-left: 1%;
+	margin-bottom: 1%;
+}
+
+button.repeatIncorrectClick{
+	background-color: yellow; 
+	position: absolute; 
+	padding: 0; 
+	margin-left: 1%;
+	margin-bottom: 1%;
+}
+
 /*------------------------*/
 /* Image styles */
 
