@@ -162,6 +162,16 @@ body.colorfusion2{
 }
 
 /*------------------------*/
+/* Canvas styles */
+
+canvas.game{
+    background-color: white;
+    border-radius: 1vw;
+    height: 100%;
+    box-shadow: 0px 0px 1vw 1px #555;
+}
+
+/*------------------------*/
 /* Input styles */
 
 input {
@@ -495,6 +505,23 @@ div.minefield:hover{
 	transform: rotateY(10deg);
 }
 
+/*Colorselection*/
+div.colorselector{
+	position: absolute;
+    width: 1vw;
+    background-color: red;
+    height: 1vw;
+    border-radius: 3vw;
+}
+div.colorselector_selected{
+	position: absolute;
+    width: 1vw;
+    background-color: red;
+    height: calc(1vw - 2px);
+    border-radius: 3vw;
+	border: 2px solid black;
+	width: calc(1vw - 2px);
+}
 
 /*------------------------*/
 
