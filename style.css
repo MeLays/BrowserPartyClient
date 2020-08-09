@@ -1,4 +1,4 @@
-html, 
+html,
 body {
     height: 100%;
 	font-family: 'Ubuntu', sans-serif;
@@ -160,6 +160,10 @@ body.colorfusion2{
 	background: rgb(92,140,235);
 	background: linear-gradient(42deg, rgba(92,140,235,1) 15%, rgba(92,97,125,1) 100%);
 }
+body.colorfusion_red{
+  background: rgb(164,58,58);
+  background: linear-gradient(42deg, rgba(164,58,58,1) 15%, rgba(255,128,128,1) 100%);
+}
 
 /*------------------------*/
 /* Canvas styles */
@@ -247,7 +251,7 @@ button {
 	padding-bottom: 1vh;
 	padding-left: 1vw;
 	padding-right: 1vw;
-	
+
 	margin: 1vw;
 }
 
@@ -270,33 +274,33 @@ button.select_avatar:disabled{
 }
 
 button.repeatShown{
-	background-color: red; 
-	position: absolute; 
-	padding: 0; 
+	background-color: red;
+	position: absolute;
+	padding: 0;
 	margin-left: 1%;
 	margin-bottom: 1%;
 }
 
 button.repeatNotShown{
-	background-color: blue; 
-	position: absolute; 
-	padding: 0; 
+	background-color: blue;
+	position: absolute;
+	padding: 0;
 	margin-left: 1%;
 	margin-bottom: 1%;
 }
 
 button.repeatCorrectClick{
-	background-color: green; 
-	position: absolute; 
-	padding: 0; 
+	background-color: green;
+	position: absolute;
+	padding: 0;
 	margin-left: 1%;
 	margin-bottom: 1%;
 }
 
 button.repeatIncorrectClick{
-	background-color: yellow; 
-	position: absolute; 
-	padding: 0; 
+	background-color: yellow;
+	position: absolute;
+	padding: 0;
 	margin-left: 1%;
 	margin-bottom: 1%;
 }
@@ -316,7 +320,7 @@ div.elevated{
 	background-color: transparent;
 	border-radius: 2vw;
 	box-shadow: 0px 0px 2vw rgba(0,0,0,0.3);
-	
+
 	position: absolute;
 	padding:3vw;
 	animation: slide_in 1.0s;
@@ -326,7 +330,7 @@ div.elevated_reversed{
 	background-color: transparent;
 	border-radius: 2vw;
 	box-shadow: 0px 0px 2vw rgba(0,0,0,0.3);
-	
+
 	position: absolute;
 	padding:3vw;
 	animation: slide_in_right 1.0s;
@@ -469,7 +473,7 @@ div.game_result{
 	position: fixed;
 	transition-duration: 1s;
 	padding: 1vw;
-	background: linear-gradient(9deg, rgba(235,166,92,1) 15%, rgba(236,197,78,1) 100%); 
+	background: linear-gradient(9deg, rgba(235,166,92,1) 15%, rgba(236,197,78,1) 100%);
     border-radius: 0;
 	top: 0;
 	height: 100%;

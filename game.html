@@ -1,17 +1,120 @@
 <meta charset="UTF-8">
 <html>
-<head>
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" class="keep"></script>
-	<link rel="stylesheet" href="style.css">
-	<script src="TiqoLClient.js" class="keep"></script>
-	<script class="keep">
-		var tiqoL = new TiqoLClient("localhost" , 9885 , true);
-		tiqoL.connect();
-	</script>
-</head>
-<body class="colorfusion">
-
-</body>
-<html>
+   <head>
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" class="keep"></script>
+      <link rel="stylesheet" href="style.css">
+	  <title>BrowserParty | Loading...</title>
+      <script src="TiqoLClient.js?012" class="keep"></script>
+      <script class="keep">		  
+		var tiqoL = null;
+		function connect(){
+			if (document.getElementById("cookie-message"))document.getElementById("cookie-message").style.display = "none"; 
+			if (document.getElementById("loading-screen"))document.getElementById("loading-screen").style.display = "unset"; 
+			var tiqoL = new TiqoLClient("host.browserparty.net" , 9885);
+			tiqoL.connect();
+			window.localStorage.accepted_cookies = true;
+		}
+		
+		window.addEventListener('load', function() {
+		  	if (window.localStorage.accepted_cookies){
+				connect();
+			}
+		})
+      </script>
+      <style>
+      .lds-roller {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-roller div {
+        animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        transform-origin: 40px 40px;
+      }
+      .lds-roller div:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #fff;
+        margin: -4px 0 0 -4px;
+      }
+      .lds-roller div:nth-child(1) {
+        animation-delay: -0.036s;
+      }
+      .lds-roller div:nth-child(1):after {
+        top: 63px;
+        left: 63px;
+      }
+      .lds-roller div:nth-child(2) {
+        animation-delay: -0.072s;
+      }
+      .lds-roller div:nth-child(2):after {
+        top: 68px;
+        left: 56px;
+      }
+      .lds-roller div:nth-child(3) {
+        animation-delay: -0.108s;
+      }
+      .lds-roller div:nth-child(3):after {
+        top: 71px;
+        left: 48px;
+      }
+      .lds-roller div:nth-child(4) {
+        animation-delay: -0.144s;
+      }
+      .lds-roller div:nth-child(4):after {
+        top: 72px;
+        left: 40px;
+      }
+      .lds-roller div:nth-child(5) {
+        animation-delay: -0.18s;
+      }
+      .lds-roller div:nth-child(5):after {
+        top: 71px;
+        left: 32px;
+      }
+      .lds-roller div:nth-child(6) {
+        animation-delay: -0.216s;
+      }
+      .lds-roller div:nth-child(6):after {
+        top: 68px;
+        left: 24px;
+      }
+      .lds-roller div:nth-child(7) {
+        animation-delay: -0.252s;
+      }
+      .lds-roller div:nth-child(7):after {
+        top: 63px;
+        left: 17px;
+      }
+      .lds-roller div:nth-child(8) {
+        animation-delay: -0.288s;
+      }
+      .lds-roller div:nth-child(8):after {
+        top: 56px;
+        left: 12px;
+      }
+      @keyframes lds-roller {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      </style>
+   </head>
+   <body class="colorfusion" id="body.MainScreen">
+	   <div class="loading_gamemode" style="background: linear-gradient(9deg, rgba(16,133,0,1) 15%, rgba(116,255,123,1) 100%); z-index:12;" id ="cookie-message"><h1 id="62f764f5-df39-475c-ab6d-cf127e0325db">Cookies! 🍪</h1><span>In order to play, we need you to accept that we use cookies.</span><div style="font-size: 1vw;bottom: 0;position: absolute;right: 0;"><button onclick="connect();">ACCEPT!</button></div></div>
+      <div style="position: absolute; left:35vw; top: 15vw; width: 30vw;animation: fade_in 1.0s;display:none;" id="loading-screen"><img src="assets/logo.png" width="100%">
+        <center style="padding:5vh; font-size: 1vw;"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <br>Connecting...</center>
+      </div>
+   </body>
+</html>
