@@ -273,36 +273,34 @@ button.select_avatar:disabled{
 	opacity: 0.1;
 }
 
-button.repeatShown{
-	background-color: red;
+button.repeat{
+  border-radius: 1vh;
+	background-color: rgb(150,150,150);
+  color: rgba(0, 0, 0, 0.0);
 	position: absolute;
 	padding: 0;
 	margin-left: 1%;
 	margin-bottom: 1%;
+  opacity: 0.3;
+}
+
+button.repeatShown{
+	background-color: yellow;
+  opacity: 0.7;
 }
 
 button.repeatNotShown{
-	background-color: blue;
 	position: absolute;
-	padding: 0;
-	margin-left: 1%;
-	margin-bottom: 1%;
 }
 
 button.repeatCorrectClick{
 	background-color: green;
-	position: absolute;
-	padding: 0;
-	margin-left: 1%;
-	margin-bottom: 1%;
+  opacity: 0.7;
 }
 
 button.repeatIncorrectClick{
-	background-color: yellow;
-	position: absolute;
-	padding: 0;
-	margin-left: 1%;
-	margin-bottom: 1%;
+	background-color: red;
+  opacity: 1;
 }
 
 /*------------------------*/
