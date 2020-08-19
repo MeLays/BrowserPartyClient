@@ -427,6 +427,54 @@ div.letter_container{
 	user-select: none;
 }
 
+div.vote_gamemode:hover{
+	z-index: 15;
+	transform: scale(1.1);
+}
+
+div.vote_gamemode:active{
+	opacity: 0.7;
+}
+
+div.vote_gamemode{
+	z-index: 12;
+}
+
+div.vote_gamemode_left{
+	position: fixed;
+	transition-duration: 0.5s;
+	padding-top: 1%;
+	padding-left: 1%;
+    	border-top-left-radius: 1vw;
+    	border-bottom-left-radius: 1vw;
+	top: 50%;
+	margin-top: -15%;
+	height: 30%;
+	
+	width: 19%;
+	left:50%;
+	margin-left: -20%;
+	animation: fade_in 1.0s;
+}
+
+div.vote_gamemode_right{
+	position: fixed;
+	transition-duration: 0.5s;
+	padding-top: 1%;
+	padding-right: 1%;
+    	border-top-right-radius: 1vw;
+    	border-bottom-right-radius: 1vw;
+	top: 50%;
+	margin-top: -15%;
+	height: 30%;
+
+	width: 19%;
+	left:50%;
+	margin-left: -0%;
+	animation: fade_in 1.0s;
+	text-align: right;
+}
+
 div.loading_gamemode{
 	position: fixed;
 	transition-duration: 1s;

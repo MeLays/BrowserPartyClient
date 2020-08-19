@@ -12,7 +12,7 @@
 		function connect(){
 			if (document.getElementById("cookie-message"))document.getElementById("cookie-message").style.display = "none"; 
 			if (document.getElementById("loading-screen"))document.getElementById("loading-screen").style.display = "unset"; 
-			var tiqoL = new TiqoLClient("host.browserparty.net" , 9885);
+			var tiqoL = new TiqoLClient("127.0.0.1" , 9885, true);
 			tiqoL.connect();
 			window.localStorage.accepted_cookies = true;
 		}
