@@ -1,11 +1,16 @@
 html,
 body {
-    height: 100%;
+	scroll-behavior: smooth;
+    	height: 100%;
 	font-family: 'Ubuntu', sans-serif;
 	color: white;
 	margin:0;
 	padding:0;
 	overflow-y: hidden;
+}
+a{
+	text-decoration: none;
+	color:inherit;
 }
 h3{
 	margin-top: 1.5vh;
@@ -29,6 +34,14 @@ span{
 hr{
 	clear:both;
 	border: 1px solid rgba(255,255,255,0.2);
+}
+
+div.fieldcontainer::-webkit-scrollbar{
+	display: none;
+}
+
+div.fieldcontainer{
+	scrollbar-width: none;
 }
 
 /*------------------------*/
@@ -158,11 +171,13 @@ hr{
 
 span.badge{
 	background-color: rgba(0,0,0,0.1);
-    border-radius: 1vw;
-    padding: 0.4%;
-    position: absolute;
-    margin-top: 2.5%;
-    margin-left: 1%;
+	border-radius: 1vw;
+	padding: 0.4%;
+	margin-top: 2.5%;
+	transform: scale(0.4);
+	font-size: 0.6em;
+	margin-left: 1%;
+	vertical-align: 10%;
 }
 
 /* Basic style "colorfusion" from #EB5C79 to #7D5C60*/
@@ -398,18 +413,18 @@ div.building_container{
 }
 
 div.dice_container{
-	transition-duration: 1s;
-    font-size: 8.5vh;
+    transition-duration: 1s;
+    font-size: 7vw;
     border-color: rgba(255,255,255,0.5);
     border-style: solid;
     border-width: 0.5vh;
     border-radius: 2vw;
     position: fixed;
-    left: 1.25vw;
-    width: 10vh;
-    height: 10vh;
-    top: 85vh;
-	user-select: none;
+    left: 2vh;
+    width: 8vw;
+    height: 8vw;
+    top: calc(88vh - 7.5vw);
+    user-select: none;
 }
 
 div.dice_container:hover{

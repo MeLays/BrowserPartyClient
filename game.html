@@ -22,6 +22,24 @@
 				connect();
 			}
 		})
+		
+		//functions for the game
+		function scrollElement(element, amount){
+			amount += $(element).scrollLeft();
+			$(element).stop().animate({
+				scrollLeft: $(element).offset().left + amount
+		    	}, {queue:false,duration:250});
+		}
+		
+		//functions for the game
+		function scrollToElement(element , element2){
+			x_offset = element2.offsetLeft;
+			scroll = x_offset - (window.innerWidth / 2);
+			element.scrollTo({
+			  left: scroll,
+			  behavior: 'smooth',
+			});
+		}
       </script>
       <style>
       .lds-roller {
