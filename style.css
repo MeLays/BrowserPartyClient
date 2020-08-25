@@ -108,6 +108,20 @@ hr{
 	}
 }
 
+@keyframes fade_in_half {
+	0% {
+		opacity: 0;
+		transform: scale(1.5);
+	}
+	1% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.5;
+		transform: scale(1);
+	}
+}
+
 @keyframes MoveUpDown {
 	0%, 100% {
 		transform: translateY(0vh);
